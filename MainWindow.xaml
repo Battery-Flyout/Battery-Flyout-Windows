@@ -1,0 +1,147 @@
+﻿<Window x:Class="BatteryIcon.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BatteryIcon"
+        mc:Ignorable="d"
+        Height="270" Width="350"
+        WindowStyle="None"
+        WindowStartupLocation="Manual"
+        MinHeight="270"
+        MaxHeight="270"
+        MinWidth="350"
+        MaxWidth="350"
+        ResizeMode="NoResize"
+        AllowsTransparency="True"
+        Background="Transparent">
+
+    <Border CornerRadius="8" Background="LightSlateGray">
+        <Border CornerRadius="8" Background="#202020"
+            BorderBrush="White" Margin="1">
+            <Grid>
+                <Image Margin="14,4,257,181" 
+               Source="Resources\\high.ico"
+               Name="BatteryIcon"/>
+
+                <TextBlock HorizontalAlignment="Left" 
+                   Margin="105,20,0,0" 
+                   TextWrapping="Wrap" 
+                   VerticalAlignment="Top"
+                   Foreground="White" Height="48" Width="116"
+                   FontSize="42"
+                   FontFamily="segoeui"
+                   Name="Percent"
+                   Text="100%">
+                </TextBlock>
+
+                <TextBlock HorizontalAlignment="Left" 
+                   Margin="211,26,0,0" 
+                   TextWrapping="Wrap" 
+                   VerticalAlignment="Top"
+                   Foreground="Gray" Height="60" Width="156"
+                   FontSize="17"
+                   FontFamily="segoeui"
+                   Name="TimeRemaining"
+                   Text="2 hours 55 minutes Remaining">
+                </TextBlock>
+
+                <TextBlock HorizontalAlignment="Left"
+                   TextWrapping="Wrap" 
+                   Margin="14,87,0,0"
+                   FontSize="16" Height="25" Width="326"
+                   FontFamily="segoeui"
+                   Foreground="White"
+                   Name="SliderDescription"
+                   VerticalAlignment="Top"
+                   TextAlignment="Left">
+                   <Run Text="Power mode (plugged in): Best performance" 
+                        /><LineBreak/><Run/></TextBlock>
+
+                <Slider HorizontalAlignment="Left" 
+                VerticalAlignment="Top" 
+                Width="224"
+                Minimum="0" 
+                Maximum="240"
+                Ticks="0,80,160,240"
+                Name="PowerSlider" 
+                TickPlacement="BottomRight"
+                Value="0" 
+                ValueChanged="PowerSlider_ValueChanged"
+                IsSnapToTickEnabled="True"
+                IsMoveToPointEnabled="True"
+                TickFrequency="80"
+                Margin="54,131,0,0"/>
+
+                <Slider HorizontalAlignment="Left" 
+                Margin="50,182,0,0" 
+                VerticalAlignment="Top" 
+                Width="237"
+                Name="BrightnessSlider"
+                Minimum="0"
+                Maximum="100"
+                Value="0"
+                SmallChange="1"
+                LargeChange="10"
+                TickPlacement="BottomRight"
+                ValueChanged="Brightness_ValueChanged"
+                IsSnapToTickEnabled="False"
+                IsMoveToPointEnabled="True"
+                TickFrequency="10"
+                Height="30"/>
+
+
+                <TextBlock HorizontalAlignment="Left" 
+                   Margin="10,231,0,0" 
+                   TextWrapping="Wrap" 
+                   VerticalAlignment="Top"
+                   Foreground="Gray" 
+                   Height="21" 
+                   Width="116"
+                   FontSize="16"
+                   FontFamily="segoeui"
+                   Name="Battery">
+                    <Hyperlink Click="Settings_Click"
+                               >
+                        <Run Text="Battery settings" />
+                    </Hyperlink>
+                </TextBlock>
+
+                <TextBlock HorizontalAlignment="Left" 
+            Margin="292,182,0,0" 
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top"
+            Foreground="White" Height="30" Width="52"
+            FontSize="18"
+            FontFamily="segoeui"
+            x:Name="Bright_Percent"
+            Text="100%" RenderTransformOrigin="0.58,0.075"/>
+
+                <Image HorizontalAlignment="Left" 
+                   Height="39" 
+                   Width="34"
+                   Margin="11,178,0,0" 
+                   VerticalAlignment="Top" 
+                   Source="Resources\brightness.ico">
+                </Image>
+                <Image HorizontalAlignment="Left" 
+                   Height="28" 
+                   Width="30"
+                   Margin="14,125,0,0" 
+                   VerticalAlignment="Top"
+                   Source="Resources\power_saver.ico"/>
+                <Image HorizontalAlignment="Left" 
+                Height="28" 
+                Width="30"
+                Margin="292,126,0,0" 
+                VerticalAlignment="Top"
+                Source="Resources\performance.ico"/>
+
+
+
+            </Grid>
+        </Border>
+    </Border>
+</Window>
+    
+    
